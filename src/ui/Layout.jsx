@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
-// import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBar";
 
 const LayoutContainer = styled.div`
   min-height: 100vh;
