@@ -33,40 +33,40 @@ const GlobalStyles = createGlobalStyle`
 
   /* Design System Variables */
   :root {
-    /* Light Theme Colors */
-    --color-primary: #e65f78;
-    --color-primary-light: #ff7b93;
-    --color-primary-dark: #cc4861;
-    --color-primary-rgb: 230, 95, 120;
-    
-    --color-secondary: #6C63FF;
-    --color-secondary-light: #8A84FF;
-    --color-secondary-dark: #5046E5;
-    
-    --color-accent: #00D9C5;
-    --color-accent-light: #20F4E0;
-    --color-accent-dark: #00B3A3;
-    
-    --color-success: #2DD4BF;
-    --color-warning: #F59E0B;
-    --color-error: #EF4444;
-    --color-info: #3B82F6;
+      /* Light Theme Colors */
+      --color-primary: #e65f78;
+      --color-primary-light: #ff7b93;
+      --color-primary-dark: #cc4861;
+      --color-primary-rgb: 230, 95, 120;
+      
+      --color-secondary: #6C63FF;
+      --color-secondary-light: #8A84FF;
+      --color-secondary-dark: #5046E5;
+      
+      --color-accent: #00D9C5;
+      --color-accent-light: #20F4E0;
+      --color-accent-dark: #00B3A3;
+      
+      --color-success: #2DD4BF;
+      --color-warning: #F59E0B;
+      --color-error: #EF4444;
+      --color-info: #3B82F6;
 
-    /* Light Theme UI Colors */
-    --color-bg: #f8f9fa;
-    --color-bg-secondary: #ffffff;
-    --color-surface: #ffffff;
-    --color-surface-secondary: #f3f3f3;
-    
-    --color-border: #dee2e6;
-    --color-border-light: #e9ecef;
-    
-    --color-text: #11161a;
-    --color-text-secondary: #495057;
-    --color-text-muted: #6c757d;
-    
-    --color-overlay: rgba(0, 0, 0, 0.5);
-    --color-overlay-light: rgba(0, 0, 0, 0.2);
+      /* Light Theme UI Colors */
+      --color-bg: #f8f9fa;
+      --color-bg-secondary: #ffffff;
+      --color-surface: #ffffff;
+      --color-surface-secondary: #f3f3f3;
+      
+      --color-border: #dee2e6;
+      --color-border-light: #e9ecef;
+      
+      --color-text: #11161a;
+      --color-text-secondary: #495057;
+      --color-text-muted: #6c757d;
+      
+      --color-overlay: rgba(0, 0, 0, 0.5);
+      --color-overlay-light: rgba(0, 0, 0, 0.2);
 
     /* Typography */
     --font-family-primary: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
