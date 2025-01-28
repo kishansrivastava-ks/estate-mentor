@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { NavLink, useLocation } from "react-router-dom";
 import { Menu, X, Home } from "lucide-react";
-import ThemeToggle from "../../utils/ThemeToggle";
+import ThemeToggle from "../utils/ThemeToggle";
 
 const Nav = styled.nav`
   position: sticky;
