@@ -3,6 +3,7 @@ import GlobalStyles from "./styles/GlobalStyles";
 // import Home from "./pages/Home";
 import { ThemeProvider } from "./context/ThemeContext";
 import Layout from "./ui/Layout";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
       <GlobalStyles />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />} />
+          <Route path="/" element={<Layout />}>
+            <Route path="" element={<Home />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
