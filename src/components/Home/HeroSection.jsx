@@ -98,7 +98,7 @@ const CTAButton = styled(motion.button)`
 const ScrollIndicator = styled(motion.div)`
   position: absolute;
   bottom: var(--spacing-xl);
-  left: 50%;
+  left: 45%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
