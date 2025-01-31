@@ -5,6 +5,7 @@ import { ThemeProvider } from "./context/ThemeContext";
 import Layout from "./ui/Layout";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
+import Tenants from "./pages/Tenants";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route path="" element={<Home />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="tenants" element={<Tenants />} />
           </Route>
         </Routes>
       </BrowserRouter>
