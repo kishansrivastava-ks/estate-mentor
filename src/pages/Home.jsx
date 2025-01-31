@@ -10,6 +10,7 @@ import ConsultationCTA from "../components/Home/ConsultationCTA";
 import MissionSection from "../components/Home/MissionSection";
 import TestimonialsSection from "../components/Home/TestimonialsSection";
 import AboutSection from "../components/Home/AboutSection";
+import PageTransition from "../utils/PageTransition";
 
 const Container = styled.div`
   /* border: 1px solid white; */
@@ -21,7 +22,7 @@ const Container = styled.div`
 
 function Home() {
   return (
-    <>
+    <PageTransition>
       <HeroSection />
       <FeaturesSection />
       <StatsSection />
@@ -30,7 +31,7 @@ function Home() {
       <MissionSection />
       <TestimonialsSection />
       <AboutSection />
-    </>
+    </PageTransition>
   );
 }
 

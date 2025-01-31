@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X, Home } from "lucide-react";
 import ThemeToggle from "../utils/ThemeToggle";
 
@@ -28,7 +28,7 @@ const NavContainer = styled.div`
   gap: 1rem;
 `;
 
-const LogoContainer = styled.div`
+const LogoContainer = styled(Link)`
   display: flex;
   gap: 0.5rem;
 `;
@@ -116,6 +116,7 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 const ThemeToggleWrapper = styled.div`
+  margin-left: 1rem;
   @media (max-width: 768px) {
     margin-left: auto;
   }
@@ -182,7 +183,7 @@ const NavBar = () => {
   return (
     <Nav>
       <NavContainer>
-        <LogoContainer>
+        <LogoContainer to="/">
           <LogoIcon size={31} />
           <LogoText>
             Estate<span>Mentor</span>
