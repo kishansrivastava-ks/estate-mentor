@@ -110,7 +110,7 @@ const TenantHero = () => {
       <Animated animation="fadeInScale" delay={0.3}>
         <ImageWrapper>
           <img
-            src="/api/placeholder/tenant.svg"
+            src="/api/placeholder/apartment-rent-animate.svg"
             alt="Modern Living Space"
             style={{
               maxWidth: "80%",
