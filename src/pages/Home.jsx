@@ -9,6 +9,7 @@ import WhyUsSection from "../components/Home/WhyUsSection";
 import ConsultationCTA from "../components/Home/ConsultationCTA";
 import MissionSection from "../components/Home/MissionSection";
 import TestimonialsSection from "../components/Home/TestimonialsSection";
+import AboutSection from "../components/Home/AboutSection";
 
 const Container = styled.div`
   /* border: 1px solid white; */
@@ -28,6 +29,7 @@ function Home() {
       <ConsultationCTA />
       <MissionSection />
       <TestimonialsSection />
+      <AboutSection />
     </>
   );
 }

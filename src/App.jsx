@@ -4,6 +4,7 @@ import GlobalStyles from "./styles/GlobalStyles";
 import { ThemeProvider } from "./context/ThemeContext";
 import Layout from "./ui/Layout";
 import Home from "./pages/Home";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="" element={<Home />} />
+            <Route path="contact" element={<Contact />} />
           </Route>
         </Routes>
       </BrowserRouter>

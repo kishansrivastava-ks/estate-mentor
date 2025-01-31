@@ -170,11 +170,11 @@ const NavBar = () => {
   }, [isOpen]);
 
   const navItems = [
-    { title: "Property Owners", path: "/property-owners" },
+    { title: "Home", path: "/" },
     { title: "List Your Home", path: "/list-your-home" },
     { title: "Tenants", path: "/tenants" },
-    { title: "Awards", path: "/awards" },
-    { title: "Podcast", path: "/podcast" },
+    // { title: "Awards", path: "/awards" },
+    // { title: "Podcast", path: "/podcast" },
     { title: "Contact Us", path: "/contact" },
   ];
 
