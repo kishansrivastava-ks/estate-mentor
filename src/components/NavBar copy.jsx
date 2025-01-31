@@ -25,17 +25,19 @@ const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
 `;
 
 const LogoContainer = styled.div`
   display: flex;
+  /* align-items: center; */
+  /* border: 2px solid var(--color-primary); */
   gap: 0.5rem;
 `;
 
 const LogoIcon = styled(Home)`
   color: var(--color-primary);
   transition: color 0.3s ease;
+  /* border: 1px solid black; */
   margin: auto 0;
 `;
 
@@ -44,6 +46,7 @@ const LogoText = styled.h1`
   font-weight: 700;
   color: var(--color-text);
   transition: color 0.3s ease;
+  /* border: 1px solid black; */
   margin: auto 0;
 
   span {
@@ -59,7 +62,6 @@ const NavLinks = styled.div`
   display: flex;
   align-items: center;
   gap: 2rem;
-  margin-left: auto;
 
   @media (max-width: 1024px) {
     position: fixed;
@@ -115,23 +117,8 @@ const StyledNavLink = styled(NavLink)`
   }
 `;
 
-const ThemeToggleWrapper = styled.div`
-  @media (max-width: 768px) {
-    margin-left: auto;
-  }
-`;
-
-const MobileMenuContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-
-  @media (min-width: 1025px) {
-    display: none;
-  }
-`;
-
 const MobileMenuButton = styled.button`
+  display: none;
   background: none;
   border: none;
   color: var(--color-text);
@@ -142,6 +129,10 @@ const MobileMenuButton = styled.button`
 
   &:hover {
     color: var(--color-primary);
+  }
+
+  @media (max-width: 1024px) {
+    display: block;
   }
 `;
 
@@ -164,18 +155,26 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
+  // Close mobile menu when route changes
   useEffect(() => {
     setIsOpen(false);
   }, [location]);
 
+  // Prevent scrolling when mobile menu is open
   useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "unset";
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
   }, [isOpen]);
 
   const navItems = [
     { title: "Home", path: "/" },
     { title: "List Your Home", path: "/list-your-home" },
     { title: "Tenants", path: "/tenants" },
+    // { title: "Awards", path: "/awards" },
+    // { title: "Podcast", path: "/podcast" },
     { title: "Contact Us", path: "/contact" },
   ];
 
@@ -199,19 +198,15 @@ const NavBar = () => {
               {item.title}
             </StyledNavLink>
           ))}
+          <ThemeToggle />
         </NavLinks>
 
-        <ThemeToggleWrapper>
-          <ThemeToggle />
-        </ThemeToggleWrapper>
-        <MobileMenuContainer>
-          <MobileMenuButton
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </MobileMenuButton>
-        </MobileMenuContainer>
+        <MobileMenuButton
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </MobileMenuButton>
 
         <Overlay isOpen={isOpen} onClick={() => setIsOpen(false)} />
       </NavContainer>
