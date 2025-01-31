@@ -9,7 +9,7 @@ const ContactHeroContainer = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-2xl);
-  padding: var(--spacing-3xl) var(--spacing-xl);
+  padding: var(--spacing-3xl);
   background-color: var(--color-bg);
   min-height: 80vh;
   align-items: center;

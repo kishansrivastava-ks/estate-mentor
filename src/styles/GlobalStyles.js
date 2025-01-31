@@ -303,6 +303,11 @@ const GlobalStyles = createGlobalStyle`
     animation: slideUp var(--transition-medium) ease-out;
   }
 
+   /* Disable blue tap highlight effect on mobile */
+   a, button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   /* Scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
