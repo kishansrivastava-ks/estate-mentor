@@ -6,6 +6,7 @@ import Layout from "./ui/Layout";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Tenants from "./pages/Tenants";
+import ListYourHome from "./pages/ListYourHome";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="" element={<Home />} />
             <Route path="contact" element={<Contact />} />
             <Route path="tenants" element={<Tenants />} />
+            <Route path="list-your-home" element={<ListYourHome />} />
           </Route>
         </Routes>
       </BrowserRouter>
