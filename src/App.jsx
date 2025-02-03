@@ -17,8 +17,8 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route path="" element={<Home />} />
             <Route path="contact" element={<Contact />} />
-            <Route path="tenants" element={<Tenants />} />
-            <Route path="list-your-home" element={<ListYourHome />} />
+            <Route path="real-estate-consultant" element={<Tenants />} />
+            <Route path="property-management" element={<ListYourHome />} />
           </Route>
         </Routes>
       </BrowserRouter>

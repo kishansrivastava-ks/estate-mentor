@@ -175,8 +175,8 @@ const NavBar = () => {
 
   const navItems = [
     { title: "Home", path: "/" },
-    { title: "List Your Home", path: "/list-your-home" },
-    { title: "Tenants", path: "/tenants" },
+    { title: "Property Management", path: "/property-management" },
+    { title: "Real Estate Consultant", path: "/real-estate-consultant" },
     { title: "Contact Us", path: "/contact" },
   ];
 
