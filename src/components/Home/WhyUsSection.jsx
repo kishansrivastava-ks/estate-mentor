@@ -114,27 +114,27 @@ const FeatureDescription = styled.p`
 const features = [
   {
     icon: History,
-    title: "Decade of Experience",
+    title: "Local Expertise, Global Standards",
     description:
-      "Leverage our 10+ years of industry expertise in property management. We've successfully managed thousands of properties, understanding every nuance of the real estate market.",
+      "With deep roots in Bangalore, we know the city’s real estate landscape inside out. From Koramangala to Whitefield, we ensure your property is managed with precision and care, adhering to the highest standards.",
   },
   {
     icon: Shield,
-    title: "Safety and Security First",
+    title: "End-to-End Solutions",
     description:
-      "Our rigorous security protocols and advanced surveillance systems ensure your property is protected 24/7. Regular safety audits and immediate incident response guarantee peace of mind.",
+      "From tenant screening and rent collection to maintenance and legal compliance, we handle it all. Our comprehensive services are designed to maximize your returns while minimizing your hassles.",
   },
   {
     icon: Smartphone,
-    title: "Real Time Updates on App",
+    title: "Tech-Driven Convenience",
     description:
-      "Stay connected with your property through our intuitive mobile app. Track rent payments, maintenance requests, and occupancy status in real-time with just a few taps.",
+      "Our state-of-the-art platform gives you 24/7 access to your property’s performance, financial reports, and maintenance updates. Stay connected and in control, anytime, anywhere.",
   },
   {
     icon: Users,
-    title: "Dedicated Service Managers",
+    title: "Dedicated Relationship Managers",
     description:
-      "Each property is assigned a dedicated manager who oversees all aspects of management. They're your single point of contact, ensuring personalized attention and quick resolution.",
+      "Forget faceless service! Our dedicated relationship managers are just a call away, ensuring personalized attention and quick resolution of any concerns.",
   },
   {
     icon: Wallet,

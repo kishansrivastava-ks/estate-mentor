@@ -43,8 +43,9 @@ const FeatureCard = styled(motion.div)`
   transition: all var(--transition-medium);
   height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  /* flex-direction: column; */
+
+  align-items: center;
   gap: var(--spacing-md);
   cursor: pointer;
 
@@ -89,25 +90,43 @@ const FeatureDescription = styled.p`
 const features = [
   {
     icon: UserCheck,
-    title: "Verified Tenants",
+    title: "Residential Property Management",
     description:
       "Comprehensive background checks and verification process to ensure reliable, trustworthy tenants for your property.",
   },
   {
     icon: Users,
-    title: "Tenant Management",
+    title: "Commercial Property Management",
     description:
       "Expert handling of tenant communications, concerns, and requests, ensuring smooth landlord-tenant relationships.",
   },
   {
     icon: Wrench,
-    title: "Maintenance and Interiors",
+    title: "Tenant Placement & Retention",
     description:
       "Regular property maintenance, swift repairs, and interior updates to maintain and enhance your property's value.",
   },
   {
     icon: Wallet,
-    title: "Rent Collection",
+    title: "Maintenance & Repairs",
+    description:
+      "Efficient, automated rent collection system with detailed financial reporting and timely owner disbursements.",
+  },
+  {
+    icon: Wallet,
+    title: "Legal & Compliance Support",
+    description:
+      "Efficient, automated rent collection system with detailed financial reporting and timely owner disbursements.",
+  },
+  {
+    icon: Wallet,
+    title: "Rent Collection & Financial Reporting",
+    description:
+      "Efficient, automated rent collection system with detailed financial reporting and timely owner disbursements.",
+  },
+  {
+    icon: Wallet,
+    title: "Rental maximization",
     description:
       "Efficient, automated rent collection system with detailed financial reporting and timely owner disbursements.",
   },
@@ -122,7 +141,7 @@ const FeaturesSection = () => {
           whileInView={animations.slideDown.whileInView}
           viewport={{ once: true }}
         >
-          Property Management Done Right
+          Our Services
         </SectionHeader>
 
         <FeaturesGrid>
@@ -141,7 +160,7 @@ const FeaturesSection = () => {
                 <feature.icon size={32} weight="bold" />
               </IconWrapper>
               <FeatureTitle>{feature.title}</FeatureTitle>
-              <FeatureDescription>{feature.description}</FeatureDescription>
+              {/* <FeatureDescription>{feature.description}</FeatureDescription> */}
             </FeatureCard>
           ))}
         </FeaturesGrid>

@@ -158,12 +158,15 @@ const HeroSection = () => {
           whileInView={animations.slideRight.whileInView}
           transition={animations.slideRight.transition}
         >
-          <HeroTitle>Transform Your Property Investment Journey</HeroTitle>
-          <HeroText>
+          <HeroTitle>
+            Welcome to Estate Mentor Your Trusted Property Management Partner in
+            Bangalore!
+          </HeroTitle>
+          {/* <HeroText>
             Expert guidance to help you make informed decisions in the
             ever-evolving real estate market. From residential to commercial,
             we've got you covered.
-          </HeroText>
+          </HeroText> */}
         </TextContainer>
 
         <CTAButton

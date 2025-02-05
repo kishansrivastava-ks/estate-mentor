@@ -30,7 +30,7 @@ const Title = styled(motion.h1)`
   font-size: var(--text-4xl);
   color: var(--color-text);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1;
 `;
 
 const Description = styled(motion.p)`
@@ -96,32 +96,34 @@ const ContactHero = () => {
     {
       icon: Mail,
       title: "Email",
-      detail: "support@estatementor.com",
+      detail: "estatementor.learn@gmail.com",
     },
     {
       icon: Phone,
       title: "Phone",
-      detail: "+1 (555) 123-4567",
+      detail: "+91 8105767992",
     },
-    {
-      icon: MapPin,
-      title: "Address",
-      detail: "123 Property Lane, Real Estate City",
-    },
+    // {
+    //   icon: MapPin,
+    //   title: "Address",
+    //   detail: "123 Property Lane, Real Estate City",
+    // },
   ];
 
   return (
     <ContactHeroContainer>
       <ContentWrapper>
         <Animated animation="slideUp">
-          <Title>Contact EstateMentor</Title>
+          <Title>Join the Estate Mentor Family Today!</Title>
         </Animated>
 
         <Animated animation="fadeIn" delay={0.2}>
           <Description>
-            We're here to help you maximize your property's potential. Whether
-            you have questions, need support, or want to discuss property
-            management, our team is ready to assist you.
+            Ready to experience hassle-free property management in Bangalore?
+            Let&apos;s transform the way you manage your real estate
+            investments. Contact us today for a free consultation and discover
+            why we&apos;re the preferred choice for property owners across the
+            city.
           </Description>
         </Animated>
 
@@ -144,6 +146,11 @@ const ContactHero = () => {
             </Animated>
           ))}
         </ContactInfoGrid>
+        <Animated animation="fadeIn" delay={0.2}>
+          <Description>
+            Your Property, Our Priority – Because You Deserve Peace of Mind.
+          </Description>
+        </Animated>
       </ContentWrapper>
 
       <Animated animation="fadeIn" delay={0.5}>

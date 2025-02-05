@@ -179,17 +179,19 @@ const AboutSection = () => {
             transition={{ delay: 0.1 }}
           >
             <p>
-              EstateMentor has been revolutionizing property management since
-              2008, bringing innovation and excellence to real estate services.
-              Our mission is to transform property management through technology
-              while maintaining the personal touch that real estate demands.
+              At Estate Mentor , we understand that managing properties in a
+              bustling city like Bangalore can be overwhelming. Whether you own
+              a single apartment, a villa, or a portfolio of commercial spaces,
+              we&apos;re here to make property management seamless, stress-free,
+              and efficient. We bring a fresh, personalized approach to property
+              management that puts you first.
             </p>
-            <p>
+            {/* <p>
               We combine decades of industry expertise with cutting-edge
               technology to deliver unparalleled property management solutions.
               Our dedicated team of professionals ensures that every property
               under our care receives the attention it deserves.
-            </p>
+            </p> */}
           </Description>
 
           <Stats
