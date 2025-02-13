@@ -214,38 +214,38 @@ const Footer = () => {
         {/* Quick Links */}
         <FooterSection>
           <SectionTitle>Quick Links</SectionTitle>
-          <QuickLink href="/property-owners">
+          <QuickLink href="/property-management">
             <ArrowRight size={16} />
-            Property Owners
+            Property Management
           </QuickLink>
-          <QuickLink href="/list-your-home">
+          <QuickLink href="/partner-with-us">
             <ArrowRight size={16} />
-            List Your Home
+            Partner With us
           </QuickLink>
-          <QuickLink href="/tenants">
+          <QuickLink href="/real-estate-consultant">
             <ArrowRight size={16} />
-            Tenants
+            Real Estate Consultant
           </QuickLink>
-          <QuickLink href="/awards">
+          {/* <QuickLink href="/awards">
             <ArrowRight size={16} />
             Awards
-          </QuickLink>
-          <QuickLink href="/podcast">
+          </QuickLink> */}
+          {/* <QuickLink href="/podcast">
             <ArrowRight size={16} />
             Podcast
-          </QuickLink>
+          </QuickLink> */}
           <QuickLink href="/about">
             <ArrowRight size={16} />
             About Us
           </QuickLink>
-          <QuickLink href="/careers">
+          {/* <QuickLink href="/careers">
             <ArrowRight size={16} />
             Careers
-          </QuickLink>
-          <QuickLink href="/blog">
+          </QuickLink> */}
+          {/* <QuickLink href="/blog">
             <ArrowRight size={16} />
             Blog
-          </QuickLink>
+          </QuickLink> */}
         </FooterSection>
 
         {/* Contact Information */}
@@ -261,11 +261,11 @@ const Footer = () => {
           </ContactInfo>
           <ContactInfo>
             <Phone size={20} />
-            <span>+1 (555) 123-4567</span>
+            <span>+91 8105767992</span>
           </ContactInfo>
           <ContactInfo>
             <Mail size={20} />
-            <span>contact@estatementor.com</span>
+            <span>estatementor.learn@gmail.com</span>
           </ContactInfo>
           <BusinessHours>
             <SectionTitle>Business Hours</SectionTitle>

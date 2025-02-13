@@ -27,7 +27,7 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: var(--spacing-xl);
-  max-width: 600px;
+  max-width: 650px;
 
   @media (max-width: 1024px) {
     margin: 0 auto;
@@ -45,6 +45,8 @@ const Title = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1.2;
+  /* border: 2px solid white; */
+  padding-bottom: 0.5rem;
 `;
 
 const Subtitle = styled.p`
@@ -88,23 +90,27 @@ const TenantHero = () => {
     <HeroContainer>
       <ContentWrapper>
         <Animated animation="slideUp">
-          <Title>Find Your Perfect Home with EstateMentor</Title>
+          <Title>
+            Estate Mentor, Your Trusted Real Estate Partner in Bangalore!
+          </Title>
         </Animated>
 
         <Animated animation="fadeIn" delay={0.2}>
           <Subtitle>
-            Discover premium properties with professional management,
-            transparent processes, and 24/7 maintenance support. Your dream
-            rental is just a few clicks away.
+            we understand that finding the perfect home or investment property
+            is more than just a transaction – it’s a life-changing decision.
+            Whether you’re looking to buy, sell, rent, or invest in Bangalore’s
+            dynamic real estate market, we’re here to guide you every step of
+            the way
           </Subtitle>
         </Animated>
 
-        <Animated animation="slideRight" delay={0.4}>
+        {/* <Animated animation="slideRight" delay={0.4}>
           <CTAButton>
             View Available Properties
             <ArrowRight size={20} />
           </CTAButton>
-        </Animated>
+        </Animated> */}
       </ContentWrapper>
 
       <Animated animation="fadeInScale" delay={0.3}>

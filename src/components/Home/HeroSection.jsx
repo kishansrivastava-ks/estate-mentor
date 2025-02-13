@@ -159,8 +159,8 @@ const HeroSection = () => {
           transition={animations.slideRight.transition}
         >
           <HeroTitle>
-            Welcome to Estate Mentor Your Trusted Property Management Partner in
-            Bangalore!
+            Welcome to Estate Mentor Your Trusted Property Management Partner
+            and Real Estate Consultant in Bangalore!
           </HeroTitle>
           {/* <HeroText>
             Expert guidance to help you make informed decisions in the

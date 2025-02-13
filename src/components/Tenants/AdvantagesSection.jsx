@@ -42,6 +42,7 @@ const Card = styled(motion.div)`
   gap: var(--spacing-md);
   position: relative;
   overflow: hidden;
+  min-height: 17rem;
 
   &::before {
     content: "";
@@ -83,40 +84,40 @@ const AdvantagesSection = () => {
   const advantages = [
     {
       icon: Shield,
-      title: "No Brokerage",
+      title: "Local Expertise",
       description:
-        "Direct engagement with property owners. No hidden fees or brokerage charges.",
+        "With years of experience in Bangalore real estate, we have deep knowledge of neighborhoods, trends, and investments.",
     },
     {
       icon: Award,
-      title: "Verified Property Ownership",
+      title: "Personalized Service",
       description:
-        "All properties undergo strict verification process ensuring legitimate ownership.",
+        "We tailor our services to meet your unique needs, ensuring a seamless and stress-free experience",
     },
     {
       icon: Home,
-      title: "Well Maintained Properties",
+      title: "Trusted Network",
       description:
-        "Regular maintenance and upgrades to ensure comfortable living standards.",
+        "Our extensive network of buyers, sellers, landlords, and developers helps us find the best options for you.",
     },
     {
       icon: Smile,
-      title: "Hassle-free Living",
+      title: "End-to-End Support",
       description:
-        "24/7 support for maintenance requests and emergency assistance.",
+        "From property search to paperwork, we handle it all, so you can focus on what matters most",
     },
-    {
-      icon: Box,
-      title: "Effortless Selection and Move",
-      description:
-        "Streamlined property selection process and assisted move-in experience.",
-    },
-    {
-      icon: Lock,
-      title: "Secured Deposit",
-      description:
-        "Transparent deposit handling with documented terms and timely refunds.",
-    },
+    // {
+    //   icon: Box,
+    //   title: "Effortless Selection and Move",
+    //   description:
+    //     "Streamlined property selection process and assisted move-in experience.",
+    // },
+    // {
+    //   icon: Lock,
+    //   title: "Secured Deposit",
+    //   description:
+    //     "Transparent deposit handling with documented terms and timely refunds.",
+    // },
   ];
 
   return (
@@ -130,10 +131,10 @@ const AdvantagesSection = () => {
               marginBottom: "var(--spacing-md)",
             }}
           >
-            Advantages of Renting with Us
+            Why Choose Us ?
           </h2>
         </Animated>
-        <Animated animation="fadeIn" delay={0.2}>
+        {/* <Animated animation="fadeIn" delay={0.2}>
           <p
             style={{
               fontSize: "var(--text-xl)",
@@ -143,7 +144,7 @@ const AdvantagesSection = () => {
             Experience hassle-free renting with our premium services and
             tenant-first approach
           </p>
-        </Animated>
+        </Animated> */}
       </Header>
 
       <CardsGrid>

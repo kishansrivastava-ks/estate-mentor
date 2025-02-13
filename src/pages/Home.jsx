@@ -25,7 +25,7 @@ function Home() {
     <PageTransition>
       <HeroSection />
       <FeaturesSection />
-      <StatsSection />
+      {/* <StatsSection /> */}
       <WhyUsSection />
       <ConsultationCTA />
       <MissionSection />

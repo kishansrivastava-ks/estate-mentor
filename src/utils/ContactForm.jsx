@@ -147,12 +147,12 @@ const ContactForm = () => {
     {
       icon: Phone,
       title: "Phone",
-      detail: "+1 (555) 123-4567",
+      detail: "+91 8105767992",
     },
     {
       icon: Mail,
       title: "Email",
-      detail: "support@estatementor.com",
+      detail: "estatementor.learn@gmail.com",
     },
   ];
 
