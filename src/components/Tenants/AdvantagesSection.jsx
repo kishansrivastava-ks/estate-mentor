@@ -1,6 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import { Shield, Award, Home, Smile, Box, Lock } from "lucide-react";
+import {
+  Shield,
+  Award,
+  Home,
+  Smile,
+  Box,
+  Lock,
+  Landmark,
+  Map,
+  Compass,
+  UserCheck,
+  UsersRound,
+  CircleDotDashed,
+  Workflow,
+} from "lucide-react";
 import Animated from "../common/Animated";
 import { motion } from "framer-motion";
 
@@ -83,25 +97,25 @@ const IconWrapper = styled.div`
 const AdvantagesSection = () => {
   const advantages = [
     {
-      icon: Shield,
+      icon: Compass,
       title: "Local Expertise",
       description:
         "With years of experience in Bangalore real estate, we have deep knowledge of neighborhoods, trends, and investments.",
     },
     {
-      icon: Award,
+      icon: UserCheck,
       title: "Personalized Service",
       description:
         "We tailor our services to meet your unique needs, ensuring a seamless and stress-free experience",
     },
     {
-      icon: Home,
+      icon: UsersRound,
       title: "Trusted Network",
       description:
         "Our extensive network of buyers, sellers, landlords, and developers helps us find the best options for you.",
     },
     {
-      icon: Smile,
+      icon: Workflow,
       title: "End-to-End Support",
       description:
         "From property search to paperwork, we handle it all, so you can focus on what matters most",
