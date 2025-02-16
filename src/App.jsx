@@ -8,8 +8,14 @@ import Contact from "./pages/Contact";
 import Tenants from "./pages/Tenants";
 import ListYourHome from "./pages/ListYourHome";
 import PartnerWithUs from "./pages/PartnerWithUs";
+import { useEffect } from "react";
+import emailjs from "@emailjs/browser";
 
 function App() {
+  useEffect(() => {
+    emailjs.init("nKbomdejqxFGQm6aI");
+  }, []);
+
   return (
     <ThemeProvider>
       <GlobalStyles />

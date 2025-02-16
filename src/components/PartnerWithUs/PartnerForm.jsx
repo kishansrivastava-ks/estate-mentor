@@ -10,6 +10,7 @@ import {
   Phone,
   Mail,
   User,
+  IndianRupee,
 } from "lucide-react";
 import Animated from "../common/Animated";
 
@@ -252,7 +253,7 @@ const PartnerForm = () => {
                   <Input
                     type="text"
                     name="fullName"
-                    placeholder="John Doe"
+                    placeholder="Your Name"
                     value={formData.fullName}
                     onChange={handleChange}
                   />
@@ -270,7 +271,7 @@ const PartnerForm = () => {
                   <Input
                     type="email"
                     name="email"
-                    placeholder="john@example.com"
+                    placeholder="your_email@example.com"
                     value={formData.email}
                     onChange={handleChange}
                   />
@@ -288,7 +289,7 @@ const PartnerForm = () => {
                   <Input
                     type="tel"
                     name="phone"
-                    placeholder="+1 (234) 567-8900"
+                    placeholder="+91 12345 67890"
                     value={formData.phone}
                     onChange={handleChange}
                   />
@@ -298,7 +299,7 @@ const PartnerForm = () => {
 
               <FormField>
                 <Label>
-                  <DollarSign size={18} /> Expected Monthly Rent
+                  <IndianRupee size={18} /> Expected Monthly Rent
                 </Label>
                 <InputWrapper>
                   <Input
@@ -323,7 +324,7 @@ const PartnerForm = () => {
                 <Input
                   type="text"
                   name="propertyAddress"
-                  placeholder="123 Main St, City, State, ZIP"
+                  placeholder="Property Address"
                   value={formData.propertyAddress}
                   onChange={handleChange}
                 />

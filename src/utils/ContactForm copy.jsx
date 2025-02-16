@@ -1,10 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Send, MapPin, Phone, Mail } from "lucide-react";
 import Animated from "../components/common/Animated";
-import emailjs from "@emailjs/browser";
-import Toast from "./Toast";
 
 const FormContainer = styled.div`
   display: grid;
@@ -121,19 +119,12 @@ const SubmitButton = styled(motion.button)`
 `;
 
 const ContactForm = () => {
-  const form = useRef();
-  const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState({ type: "", message: "" });
-
-  const [toastStatus, setToastStatus] = useState(null);
-
   const [formData, setFormData] = useState({
-    assistType: "",
-    propertyType: "",
-    location: "",
     name: "",
-    phone: "",
     email: "",
+    phone: "",
+    service: "",
+    message: "",
   });
 
   const handleChange = (e) => {
@@ -141,52 +132,17 @@ const ContactForm = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
-    setToastStatus("loading");
-
-    try {
-      const result = await emailjs.sendForm(
-        "service_mhlbo14",
-        "template_2sh2x3b",
-        form.current,
-        "nKbomdejqxFGQm6aI"
-      );
-
-      if (result.text === "OK") {
-        setToastStatus("success");
-
-        form.current.reset();
-        setFormData({
-          assistType: "",
-          propertyType: "",
-          location: "",
-          name: "",
-          phone: "",
-          email: "",
-        });
-
-        setTimeout(() => {
-          setToastStatus(null);
-          form.current.reset();
-        }, 2000);
-      }
-    } catch (error) {
-      setToastStatus("error");
-      setTimeout(() => {
-        setToastStatus(null);
-      }, 2000);
-    } finally {
-      setLoading(false);
-    }
+    // Add form submission logic here
+    console.log("Form submitted:", formData);
   };
 
   const contactInfo = [
     {
       icon: MapPin,
       title: "Address",
-      detail: "Indranagar , Bangalore",
+      detail: "123 Property Lane, Real Estate City",
     },
     {
       icon: Phone,
@@ -243,68 +199,16 @@ const ContactForm = () => {
       </ContactDetails>
 
       <Form
-        ref={form}
         onSubmit={handleSubmit}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        {/* {status.message && alert(status.message)} */}
         <FormGroup>
-          <FormInput
-            as="select"
-            name="assistType"
-            value={formData.assistType}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Assist me with...</option>
-            <option value="buy">Buy</option>
-            <option value="rent">Rent</option>
-            <option value="sell">Sell</option>
-            <option value="evaluation">Evaluation</option>
-            <option value="careers">Careers</option>
-            <option value="business">Business</option>
-            <option value="property">Property</option>
-            <option value="other">Other</option>
-          </FormInput>
-        </FormGroup>
-
-        <FormGroup>
-          <FormInput
-            as="select"
-            name="propertyType"
-            value={formData.propertyType}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select property type...</option>
-            <option value="apartment">Apartment</option>
-            <option value="commercial">Commercial</option>
-            <option value="independent">Independent House</option>
-            <option value="lands">Lands</option>
-            <option value="plots">Residential Plots</option>
-            <option value="villa">Row House/Villa</option>
-            <option value="others">Others</option>
-          </FormInput>
-        </FormGroup>
-
-        <FormGroup>
-          <FormInput
-            type="text"
-            name="location"
-            placeholder="Location"
-            value={formData.location}
-            onChange={handleChange}
-            required
-          />
-        </FormGroup>
-
-        <FormGroup>
+          <FormLabel>Full Name</FormLabel>
           <FormInput
             type="text"
             name="name"
-            placeholder="Name"
             value={formData.name}
             onChange={handleChange}
             required
@@ -312,22 +216,48 @@ const ContactForm = () => {
         </FormGroup>
 
         <FormGroup>
+          <FormLabel>Email Address</FormLabel>
           <FormInput
-            type="tel"
-            name="phone"
-            placeholder="Phone"
-            value={formData.phone}
+            type="email"
+            name="email"
+            value={formData.email}
             onChange={handleChange}
             required
           />
         </FormGroup>
 
         <FormGroup>
+          <FormLabel>Phone Number</FormLabel>
           <FormInput
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
+            type="tel"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+          />
+        </FormGroup>
+
+        <FormGroup>
+          <FormLabel>Service Interested In</FormLabel>
+          <FormInput
+            as="select"
+            name="service"
+            value={formData.service}
+            onChange={handleChange}
+            required
+          >
+            <option value="">Select a Service</option>
+            <option value="tenant-management">Tenant Management</option>
+            <option value="property-maintenance">Property Maintenance</option>
+            <option value="financial-services">Financial Services</option>
+            <option value="consultation">Consultation</option>
+          </FormInput>
+        </FormGroup>
+
+        <FormGroup>
+          <FormLabel>Your Message</FormLabel>
+          <FormTextarea
+            name="message"
+            value={formData.message}
             onChange={handleChange}
             required
           />
@@ -337,31 +267,10 @@ const ContactForm = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           type="submit"
-          disabled={loading}
         >
-          {loading ? (
-            "Sending..."
-          ) : (
-            <>
-              <Send size={20} /> Send Message
-            </>
-          )}
+          <Send size={20} /> Send Message
         </SubmitButton>
       </Form>
-
-      <Toast
-        status={toastStatus}
-        message={
-          toastStatus === "loading"
-            ? "Sending message..."
-            : toastStatus === "success"
-            ? "Message sent successfully!"
-            : toastStatus === "error"
-            ? "Failed to send message"
-            : ""
-        }
-        onClose={() => setToastStatus(null)}
-      />
     </FormContainer>
   );
 };

@@ -254,9 +254,9 @@ const Footer = () => {
           <ContactInfo>
             <MapPin size={20} />
             <span>
-              123 Property Lane, Real Estate District
-              <br />
-              New York, NY 10001
+              Indranagar , Bangalore
+              {/* <br /> */}
+              {/* New York, NY 10001 */}
             </span>
           </ContactInfo>
           <ContactInfo>

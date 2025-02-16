@@ -68,6 +68,9 @@ const GlobalStyles = createGlobalStyle`
       --color-overlay: rgba(0, 0, 0, 0.5);
       --color-overlay-light: rgba(0, 0, 0, 0.2);
 
+      --color-success: #10B981;
+  --color-error: #EF4444;
+
     /* Typography */
     --font-family-primary: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-family-secondary: 'Inter', sans-serif;
