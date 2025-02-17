@@ -123,13 +123,13 @@ const SubmitButton = styled(motion.button)`
 const ContactForm = () => {
   const form = useRef();
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState({ type: "", message: "" });
+  // const [status, setStatus] = useState({ type: "", message: "" });
 
   const [toastStatus, setToastStatus] = useState(null);
 
   const [formData, setFormData] = useState({
-    assistType: "",
-    propertyType: "",
+    assist_type: "",
+    property_type: "",
     location: "",
     name: "",
     phone: "",
@@ -253,8 +253,8 @@ const ContactForm = () => {
         <FormGroup>
           <FormInput
             as="select"
-            name="assistType"
-            value={formData.assistType}
+            name="assist_type"
+            value={formData.assist_type}
             onChange={handleChange}
             required
           >
@@ -273,8 +273,8 @@ const ContactForm = () => {
         <FormGroup>
           <FormInput
             as="select"
-            name="propertyType"
-            value={formData.propertyType}
+            name="property_type"
+            value={formData.property_type}
             onChange={handleChange}
             required
           >
